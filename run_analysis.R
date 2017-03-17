@@ -26,4 +26,4 @@ onlystdmean$Activity_Desc <- activitynames[match(onlystdmean$Activity, activityn
 
 tidydata <- aggregate(onlystdmean, by=list(activityid = onlystdmean$Activity, activitydesc = onlystdmean$Activity_Desc, subject=onlystdmean$IDSubject), mean)
 
-write.csv(tidydata, "tidydata.csv", row.names=FALSE)
+write.table(tidydata, "tidydata.txt")
